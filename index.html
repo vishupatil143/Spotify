@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+        }
+
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            /* margin-right: 20px; */
+        }
+
+        .sidebar img {
+            width: 131px;
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 10px 0;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            color: #1DB954;
+        }
+
+        .sidebar .login-signup {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar .login-signup button {
+            background-color: #1DB954;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .main-content {
+            margin-left: 100px;
+            padding: 20px;
+        }
+
+        .popular-section {
+            margin-bottom: 20px;
+        }
+
+        .popular-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .items {
+            display: flex;
+            overflow-x: auto;
+        }
+
+        .item {
+            margin-right: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .item img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            transition: transform 0.3s;
+        }
+
+        .item:hover img {
+            transform: scale(1.1);
+            transition: transform .2s;
+        }
+
+        .album img {
+            border-radius: 0;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+        }
+
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .sidebar img {
+            width: 131px;
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            display: block;
+        }
+
+        #sign {
+            background-color: white;
+            color: #1DB954;
+        }
+
+        .sidebar .login-signup {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #sign:hover {
+            transform: scale(1.1);
+        }
+
+        #login:hover {
+            transform: scale(1.1);
+        }
+
+        #sign {
+            background-color: #1DB954;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            /* margin-top: 10px; */
+            color: white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        #login {
+            background-color: #f6f8f7;
+            border: none;
+            width: 100%;
+            /* padding: 5px; */
+            margin-top: 10px;
+            color: #1DB954;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        /* .sidebar .login-signup  button {
+            background-color: #1DB954;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            cursor: pointer;
+            border-radius: 20px;
+        } */
+
+        .main-content {
+            margin-left: 290px;
+            padding: 20px;
+        }
+
+        .popular-section {
+            margin-bottom: 20px;
+        }
+
+        .popular-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .items {
+            display: flex;
+            overflow-x: auto;
+        }
+
+        .item {
+            margin-right: 20px;
+            text-align: center;
+        }
+
+        .item img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .album img {
+            border-radius: 0;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify Logo">
+        <a href="#">Home</a>
+        <a href="#">Search</a>
+        <a href="#">Your Library</a>
+        <div class="login-signup">
+            <a href="login.html">
+                <button id="sign">Sign up</button>
+            </a>
+            <a href="login.html">
+                <button id="login">Log in</button>
+            </a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="popular-section">
+            <h2>Popular artists</h2>
+            <div class="items">
+                <div class="item">
+                    <img src="img/lhocXKtV_400x400.jpg" alt="Pritam">
+                    <p>Arjit singh</p>
+                </div>
+                <div class="item">
+                    <img src="img/img1.jpg" alt="Arijit Singh">
+                    <p>Arijit Singh</p>
+                </div>
+                <div class="item">
+                    <img src="img/img2.jpg" alt="A.R. Rahman">
+                    <p>A.R. Rahman</p>
+                </div>
+                <div class="item">
+                    <img src="img/img3.jpg" alt="Sachin-Jigar">
+                    <p>Sachin-Jigar</p>
+                </div>
+                <div class="item">
+                    <img src="img/img9.jpg" alt="Anirudh Ravichander">
+                    <p>Anirudh Ravichander</p>
+                </div>
+                <div class="item">
+                    <img src="img/img5.jpg" alt="Vishal Mishra">
+                    <p>Vishal Mishra</p>
+                </div>
+                <div class="item">
+                    <img src="img/img6.jpg" alt="Atif Aslam">
+                    <p>Atif Aslam</p>
+                </div>
+            </div>
+        </div>
+        <div class="popular-section">
+            <h2>Popular albums</h2>
+            <div class="items">
+                <div class="item album">
+                    <a href="popular_albums.html">
+                        <img src="img/img1.jpg" alt="love hotel">
+                    </a>
+                    <p>love hotel</p>
+                </div>
+                <div class="item album">
+                    <img src="img/img2.jpg" alt="Aashiqui 2">
+                    <p>Aashiqui 2</p>
+                </div>
+                <div class="item album">
+                    <img src="img/img3.jpg" alt="Ek Tha Raja">
+                    <p>Ek Tha Raja</p>
+                </div>
+                <div class="item album">
+                    <img src="img/img5.jpg" alt="ANIMAL">
+                    <p>ANIMAL</p>
+                </div>
+                <div class="item album">
+                    <img src="img/img6.jpg" alt="Sajni">
+                    <p>Sajni</p>
+                </div>
+                <div class="item album">
+                    <img src="img/lhocXKtV_400x400.jpg" alt="Moosetape">
+                    <p>Moosetape</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
